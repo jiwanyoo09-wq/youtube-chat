@@ -1,6 +1,8 @@
-# app.py
 
-```python id="c9l4zk"
+아래 전체를 그대로 `app.py`에 넣으면 됩니다.
+
+:::writing{variant="document" id="48392"}
+```python
 import streamlit as st
 import pandas as pd
 import matplotlib.pyplot as plt
@@ -285,4 +287,3 @@ if st.button("댓글 분석 시작"):
         file_name="youtube_comments.csv",
         mime="text/csv"
     )
-```
