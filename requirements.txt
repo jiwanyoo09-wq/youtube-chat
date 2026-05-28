@@ -4,5 +4,4 @@ matplotlib
 seaborn
 wordcloud
 google-api-python-client
-konlpy
 numpy
