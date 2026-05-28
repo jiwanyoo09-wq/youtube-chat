@@ -1,10 +1,8 @@
-```txt id="pr9z2m"
-streamlit==1.45.1
-pandas==2.2.3
-matplotlib==3.10.3
-seaborn==0.13.2
-wordcloud==1.9.4
-google-api-python-client==2.170.0
-konlpy==0.6.0
-numpy==2.2.6
-```
+streamlit
+pandas
+matplotlib
+seaborn
+wordcloud
+google-api-python-client
+konlpy
+numpy
