@@ -245,4 +245,3 @@ if st.button("댓글 분석 시작"):
         file_name="youtube_comments.csv",
         mime="text/csv"
     )
-```
