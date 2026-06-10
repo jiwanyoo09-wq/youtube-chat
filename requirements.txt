@@ -5,7 +5,3 @@ seaborn
 wordcloud
 google-api-python-client
 numpy
-streamlit
-google-api-python-client
-pandas
-numpy
