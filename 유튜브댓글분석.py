@@ -6,7 +6,9 @@ from wordcloud import WordCloud
 from collections import Counter
 from googleapiclient.discovery import build
 import re
+import os
 
+print(os.getenv("YOUTUBE_API_KEY"))
 # -------------------------
 # 페이지 설정
 # -------------------------
