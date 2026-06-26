@@ -1,6 +1,4 @@
 import streamlit as st
-
-st.write(st.secrets["YOUTUBE_API_KEY"][:10])
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
