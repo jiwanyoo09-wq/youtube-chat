@@ -16,23 +16,28 @@ youtube = build(
 # -----------------------------
 # 채널 검색
 # -----------------------------
+from googleapiclient.errors import HttpError
+
 def search_channel(channel_name):
+    try:
+        request = youtube.search().list(
+            part="snippet",
+            q=channel_name,
+            type="channel",
+            maxResults=1
+        )
 
-    request = youtube.search().list(
-        part="snippet",
-        q=channel_name,
-        type="channel",
-        maxResults=1
-    )
+        response = request.execute()
 
-    response = request.execute()
+        if len(response["items"]) == 0:
+            return None
 
-    if len(response["items"]) == 0:
-        return None
+        return response["items"][0]["snippet"]["channelId"]
 
-    channel_id = response["items"][0]["snippet"]["channelId"]
-
-    return channel_id
+    except HttpError as e:
+        st.error(f"HTTP Error: {e.status_code}")
+        st.code(str(e))
+        raise
 
 
 # -----------------------------
