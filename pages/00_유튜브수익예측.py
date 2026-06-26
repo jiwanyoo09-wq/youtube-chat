@@ -17,6 +17,7 @@ youtube = build(
 # 채널 검색
 # -----------------------------
 from googleapiclient.errors import HttpError
+import json
 
 def search_channel(channel_name):
     try:
@@ -29,14 +30,20 @@ def search_channel(channel_name):
 
         response = request.execute()
 
-        if len(response["items"]) == 0:
+        if not response["items"]:
             return None
 
         return response["items"][0]["snippet"]["channelId"]
 
     except HttpError as e:
         st.error(f"HTTP Error: {e.status_code}")
-        st.code(str(e))
+
+        try:
+            error = json.loads(e.content.decode())
+            st.json(error)
+        except:
+            st.write(e)
+
         raise
 
 
