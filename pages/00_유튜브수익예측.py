@@ -45,6 +45,7 @@ def search_channel(channel_name):
             st.write(e)
 
         raise
+        st.write(YOUTUBE_API_KEY[:10])
 
 
 # -----------------------------
