@@ -5,11 +5,7 @@ import seaborn as sns
 from wordcloud import WordCloud
 from collections import Counter
 from googleapiclient.discovery import build
-
-youtube = build(
-    "youtube",
-    "v3",
-    developerKey=st.secrets["YOUTUBE_API_KEY"]
+import re
 )
 
 # -------------------------
